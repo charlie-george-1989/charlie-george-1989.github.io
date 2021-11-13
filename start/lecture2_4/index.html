@@ -24,9 +24,64 @@
 </head>
 
 <body>
-  <script>  
-    
+
+  <h1>hello</h1>
+
+  <script>
+
+    // Conditional statements
+    function compare(a, b) {
+      if (isNaN(a)) {
+        console.log('a is not a number.');
+      } else if (isNaN(b)) {
+        console.log('b is not a number.');
+      } else if (a<b) {
+        console.log('a is less than b.');
+      } else if (a==b) {
+        console.log('a is equal to b.');
+      } else {
+        console.log('a is greater than b.');
+      }
+    }
+
+    // Switch
+    function today() {
+      const day = new Date().getDay();
+
+      switch(day) {
+        case 0:
+          console.log('Today is Sunday');
+          break;
+        case 1:
+          console.log('Today is Monday');
+          break;
+        case 2:
+          console.log('Today is Tuesday');
+          break;
+        case 3:
+          console.log('Today is Wednesday');
+          break;
+        case 4:
+          console.log('Today is Thursday');
+          break;
+        case 5:
+          console.log('Today is Friday');
+          break;
+        case 6:
+          console.log('Today is Saturday');
+          break;
+      }
+    }
+
+    // Conditional return
+    function weekend() {
+      const day = new Date().getDay();
+
+      return (day==0 || day==6) ? 'It is the weekend!' : 'It is not the weekend!';
+    }
+
   </script>
+
 </body>
 
 </html>

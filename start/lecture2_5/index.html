@@ -25,7 +25,70 @@
 
 <body>
    <script>
-     //Place your code here
+     
+    // Array
+    const planets = ["Mercury", "Venus", "Earth", "Mars", "Jupitor", "Saturn", "Uranus"];
+    planets.push("Neptune");
+
+    console.log("There are " + planets.length + " planets in our Solar System.");
+    console.log("Our planet is " + planets[2] + ".");
+
+    planets.push("Pluto");
+    console.log("Until 2006 there were " + planets.length + " planets in our Solar System.");
+
+    const pluto = planets.pop();
+    console.log("In 2006 " + pluto + " was declassified as a planet. Now there are " + planets.length + " planets.")
+
+    // Practice: Display current month in English
+    function month() {
+      const monthId = new Date().getMonth();
+      const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+
+      // Below was my attempt as switches were mentioned
+      switch(monthId) {
+        case 0:
+          console.log('It is January');
+          break;
+        case 1:
+          console.log('It is February');
+          break;
+        case 2:
+          console.log('It is March');
+          break;
+        case 3:
+          console.log('It is April');
+          break;
+        case 4:
+          console.log('It is May');
+          break;
+        case 5:
+          console.log('It is June');
+          break;
+        case 6:
+          console.log('It is July');
+          break;
+        case 7:
+          console.log('It is August');
+          break;
+        case 8:
+          console.log('It is September');
+          break;
+        case 9:
+          console.log('It is October');
+          break;
+        case 10:
+          console.log('It is November');
+          break;
+        case 11:
+          console.log('It is December');
+          break;
+      }
+
+      // But this was the suggested solution (which does not use a switch!)
+      return months[monthId];
+    }
+
+
    </script> 
 </body>
 
